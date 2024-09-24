@@ -1,0 +1,58 @@
+body {
+    background: linear-gradient(to bottom right, lightgrey, silver, black);
+    background-size: 180% 180%;
+    animation: gradient-animation 10s ease infinite;
+  }
+  
+  @keyframes gradient-animation {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+
+.text-container {
+    border-left: thick solid black;
+}
+
+.navbar {
+    display: flex;
+    gap: 10px;
+    justify-content: flex-start;
+}
+
+.navbar-toggler {
+    border: none !important;
+}
+
+.sendEmail {
+  border-right: thin solid #ffffff8c;
+}
+
+@media (max-width: 990px) {
+  .text-container {
+    border-left: none;
+  }    
+}
+
+@media (max-width: 600px) {
+  .my-image {
+    height: auto !important;
+  }
+}
+
+@media (max-width: 992px) {
+  .sendEmail {
+    border-right: none;
+    padding-right: 1rem !important;
+  }
+
+  .info {
+    padding-left: 1rem !important;
+  }
+}

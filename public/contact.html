@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Contact Me</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="../style.css">
+        <style>
+            body {
+                background: linear-gradient(90deg, rgb(118, 118, 118), silver);
+                background-size: 180% 180%;
+                animation-name: none;
+            }
+        </style>   
+        <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+        </script>
+        <script type="text/javascript">
+          (function(){
+              emailjs.init({
+                publicKey: "5paUOLRv7kNYXKljx",
+              });
+          })();
+        </script>
+        <script src="../script.js"></script>     
+    </head>
+
+    <body>
+        <nav class="navbar navbar-dark bg-dark" aria-label="Dark offcanvas navbar">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="#">Ndaleh Nyhong Mbinyui</a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbarDark" aria-controls="offcanvasNavbarDark" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasNavbarDark" aria-labelledby="offcanvasNavbarDarkLabel">
+                <div class="offcanvas-header">
+                  <h5 class="offcanvas-title" id="offcanvasNavbarDarkLabel">More</h5>
+                  <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+                  <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                    <li class="nav-item">
+                      <a class="nav-link active" aria-current="page" href="../index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="./about.html">About Me</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./contact.html">Contact Me</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+        </nav>  
+        
+        <div class="container px-4 pt-5 pb-3">
+          <h1 class="pb-2 border-bottom display-5 fw-bold text-body-emphasis bs-light-text-emphasis">REACH ME</h1>
+          <div class="container">
+            <div class="row">
+              <form class="col-lg-8 col-sm-12 sendEmail pe-5">
+                <h2 class="text-body-emphasis my-3">Send Me an Email</h2>
+  
+                <div class="mb-3">
+                  <label for="name" class="form-label">Your Name</label>
+                  <input type="text" class="form-control" id="name" name="name" aria-describedby="emailHelp" required>
+                </div>
+  
+                <div class="mb-3">
+                  <label for="email" class="form-label">Your Email Address</label>
+                  <input type="email" class="form-control" id="email" name="email" aria-describedby="emailHelp" required>
+                  <div id="emailHelp" class="form-text">I'll never share your email with anyone else.</div>
+                </div>
+  
+                <div class="mb-3">
+                  <label for="subject" class="form-label">Subject</label>
+                  <input type="text" class="form-control" id="subject" name="subject" aria-describedby="emailHelp" required>
+                </div>
+  
+                <div class="mb-3">
+                  <label for="message" class="form-label">Message</label>
+                  <textarea class="form-control" id="message" name="message" rows="3" placeholder="Write your message here..." required></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary" onclick="sendEmail()">Send</button>
+              </form>
+  
+              <div class="col-lg-4 col-sm-12 d-fle align-items-center info ps-5">
+                <h2 class="text-body-emphasis my-3">Other Useful information</h2>
+                <p class="display-6">My contact: <br> +237 6 77 37 33 98</p>
+              </div>
+            </div>
+          </div>          
+        </div>
+    </body>
+</html>
